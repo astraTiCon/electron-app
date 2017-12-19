@@ -1,0 +1,19 @@
+{
+  "name": "electron-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astraTiCon/electronTest.git"
+  },
+  "author": "Mario Geuenich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astraTiCon/electronTest/issues"
+  },
+  "homepage": "https://github.com/astraTiCon/electronTest#readme"
+}
