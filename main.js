@@ -1,7 +1,23 @@
 const electron = require("electron")
 const {app, BrowserWindow} = electron
+const path = require("path")
+const url = require("url")
+
+let mainWindow
 
 app.on("ready", () => {
-  let window = new BrowserWindow({width:800, height:600})
-  console.log(window);
+  let mainWindow = new BrowserWindow({width:800, height:600})
+
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
 })
+
+function demo(){
+  console.log("demo");
+}
+
+document.getElementById('demo').addEventListener("click", demo)
