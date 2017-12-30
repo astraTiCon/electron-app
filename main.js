@@ -14,10 +14,12 @@ app.on("ready", () => {
     slashes: true
   }))
 
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  })
+
 })
 
 function demo(){
   console.log("demo");
 }
-
-document.getElementById('demo').addEventListener("click", demo)
