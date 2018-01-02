@@ -11,6 +11,7 @@ body {
   text-align: center;
   font-size: 24px;
 
+  position: absolute;
   transition-duration: 0.2s; /*Time it takes to change colour on hover*/
 }
 
@@ -18,11 +19,51 @@ body {
   background-color: #4CAF80;
 }
 
-/* .class { #CLASS SELECTOR
-} */
-
-/* #idName { #ID SELECTOR
-} */
-
-/* elementName.class { #ELEMENT WITH CLASS class
-} */
+#button1 {
+  left: 10px;
+  top: 10px;
+}
+#button2 {
+  left: 162px;
+  top: 10px;
+}
+#button3 {
+  left: 314px;
+  top: 10px;
+}
+#button4 {
+  left: 10px;
+  top: 70px;
+}
+#button5 {
+  left: 162px;
+  top: 70px;
+}
+#button6 {
+  left: 314px;
+  top: 70px;
+}
+#button7 {
+  left: 10px;
+  top: 130px;
+}
+#button8 {
+  left: 162px;
+  top: 130px;
+}
+#button9 {
+  left: 314px;
+  top: 130px;
+}
+#button10 {
+  left: 10px;
+  top: 190px;
+}
+#button11 {
+  left: 162px;
+  top: 190px;
+}
+#button12 {
+  left: 314px;
+  top: 190px;
+}
