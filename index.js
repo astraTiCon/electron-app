@@ -1,9 +1,13 @@
+const electron = require("electron")
+const {ipcRenderer} = electron
 
-button = document.getElementById("button")
+// TODO: handle event for dot button press
 
-button.addEventListener("click", () => {
+function numbersEventHandler(element) {
+  let integerPressed = parseInt(element.value)
+  // ipcRenderer.send('someAction', integerPressed);
+}
 
-  // button.value = "SOME TEXT"
-
-
-});
+function equalsEventHandler(element){
+  // response action
+}
