@@ -19,15 +19,15 @@ body {
   background-color: #4CAF80;
 }
 
-#button1 {
+#button7 {
   left: 10px;
   top: 10px;
 }
-#button2 {
+#button8 {
   left: 162px;
   top: 10px;
 }
-#button3 {
+#button9 {
   left: 314px;
   top: 10px;
 }
@@ -43,27 +43,27 @@ body {
   left: 314px;
   top: 70px;
 }
-#button7 {
+#button1 {
   left: 10px;
   top: 130px;
 }
-#button8 {
+#button2 {
   left: 162px;
   top: 130px;
 }
-#button9 {
+#button3 {
   left: 314px;
   top: 130px;
 }
-#button10 {
+#button0 {
   left: 10px;
   top: 190px;
 }
-#button11 {
+#buttonDot {
   left: 162px;
   top: 190px;
 }
-#button12 {
+#buttonEqual {
   left: 314px;
   top: 190px;
 }
