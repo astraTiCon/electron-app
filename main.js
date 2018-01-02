@@ -19,7 +19,3 @@ app.on("ready", () => {
   })
 
 })
-
-function demo(){
-  console.log("demo");
-}
