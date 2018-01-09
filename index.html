@@ -6,18 +6,24 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button0" value="0">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button1" value="1">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button2" value="2">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button3" value="3">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button4" value="4">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button5" value="5">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button6" value="6">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button7" value="7">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button8" value="8">
-    <input type="button" class="button" onclick="numbersEventHandler(this)" id="button9" value="9">
-    <input type="button" class="button" id="buttonDot" value=".">
-    <input type="button" class="button" onclick="equalsEventHandler" id="buttonEqual" value="=">
+
+    <!-- All the buttons -->
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button0" value="0">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button1" value="1">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button2" value="2">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button3" value="3">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button4" value="4">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button5" value="5">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button6" value="6">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button7" value="7">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button8" value="8">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="button9" value="9">
+    <input type="button" class="button" onclick="inputEventHandler(this)" id="buttonDot" value=".">
+    <input type="button" class="button" onclick="equalsEventHandler(this)" id="buttonEqual" value="=">
+
+    <input type="text" id="inputBox">
+    <p id=output>Some text</p>
+
 
     <script type="text/javascript" src="index.js"></script>
   </body>
