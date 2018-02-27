@@ -1,9 +1,9 @@
-const electron = require("electron")
-const {app, BrowserWindow, ipcMain} = electron
-const path = require("path")
-const url = require("url")
+const electron = require("electron");
+const {app, BrowserWindow, ipcMain} = electron;
+const path = require("path");
+const url = require("url");
 
-let mainWindow
+let mainWindow;
 
 app.on("ready", () => {
   let mainWindow = new BrowserWindow({width:1500, height:800})
@@ -14,7 +14,7 @@ app.on("ready", () => {
     slashes: true
   }))
 
-  mainWindow.openDevTools()
+  mainWindow.openDevTools();
 
   mainWindow.on("closed", () => {
     mainWindow = null;
