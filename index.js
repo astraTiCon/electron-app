@@ -19,7 +19,7 @@ function equalsEventHandler(element){
       input = input[0];
       let inputArray = mathStrToArray(input);
       let rpn = toRPN(inputArray);
-      document.getElementById("output").innerHTML = calculateRPN(rpn)
+      document.getElementById("output").innerHTML = calculateOnRPN(rpn)
     }
   }
 }
@@ -46,16 +46,46 @@ function mathStrToArray(inputString){
 }
 
 
-function toRPN(inputArray){ // Reverse Polish Notation
-  let rpnArray = [];
+// @return RPN array
+// convert input array to Reverse Polish Notation array
+function toRPN(inputArray) {
+    function hasOperatorPrecedence(operator1, operator2) {
+        // @return boolean -> true if operator1 has precedence over operator2
+        // NOTE: if the two operators are of equal precedence, it will return true given the nature of conversion to RPN
 
-  console.log("inputArray is: ", inputArray);
+        let tierOneOperators = ["*", "/"]; //operators with the highest precedence
+        let tierTwoOperators = ["+", "-"];
 
-  return rpnArray
+        return !(tierTwoOperators.includes(operator1) && tierOneOperators.includes(operator2));
+
+    }
+
+    // @format inputArray = [69, "*", 41, "+", 12, "-", 1]
+    let rpnArray = [];
+    let tempOperatorStack = [];
+
+    // push onto RPN stack
+    for (var i = 0; i < inputArray.length; i++) {
+        if (typeof inputArray[i] === "number") { // Numbers go straight onto the output stack
+            rpnArray.push(inputArray[i])
+        } else {
+            while ( tempOperatorStack.length > 0 && hasOperatorPrecedence(tempOperatorStack[tempOperatorStack.length - 1], inputArray[i])) { //does NOT have precedence
+                rpnArray.push(tempOperatorStack.pop())
+            }
+            tempOperatorStack.push(inputArray[i])
+        }
+    }
+    // Push the rest of tempOperatorStack onto rpnArray
+    while (tempOperatorStack.length > 0) {
+        rpnArray.push(tempOperatorStack.pop())
+    }
+
+
+    return rpnArray
 }
 
-
-function calculateRPN(rpnArray) {
+// Perform math operations on RPN array and return the resulting "sum"
+function calculateOnRPN(rpnArray) {
   let computation;
 
   // while (rpnArray > 2){
