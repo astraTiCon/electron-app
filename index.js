@@ -65,7 +65,7 @@ function toRPN(inputArray) {
     let tempOperatorStack = [];
 
     // push onto RPN stack
-    for (var i = 0; i < inputArray.length; i++) {
+    for (let i = 0; i < inputArray.length; i++) {
         if (typeof inputArray[i] === "number") { // Numbers go straight onto the output stack
             rpnArray.push(inputArray[i])
         } else {
@@ -84,14 +84,31 @@ function toRPN(inputArray) {
     return rpnArray
 }
 
-// Perform math operations on RPN array and return the resulting "sum"
+// Calculate result from RPN arrayPerform math operations on RPN array and return the result
+// @format inputArray = [69, 41, "*", "+", 12, "-", 1]
 function calculateOnRPN(rpnArray) {
-  let computation;
+  let computation = [];
 
-  // while (rpnArray > 2){
-  //
-  // }
-  return computation
+  for (let i = 0; i < rpnArray.length; i++){
+      if (typeof rpnArray[i] === "number"){
+          computation.push(rpnArray[i])
+      } else {
+          let operator = rpnArray[i];
+
+          if (operator === "+"){
+              computation[0] = computation[0] + computation[1]
+          } else if (operator === "-"){
+              computation[0] = computation[0] - computation[1]
+          } else if (operator === "*"){
+              computation[0] = computation[0] * computation[1]
+          } else if (operator === "/"){
+              computation[0] = computation[0] / computation[1]
+          }
+          computation.pop()
+      }
+  }
+
+  return computation[0]
 }
 
 

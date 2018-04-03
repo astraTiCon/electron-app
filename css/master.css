@@ -78,11 +78,23 @@ p {
   left: 10px;
   top: 190px;
 }
-#buttonDot {
+#buttonTimes {
   left: 162px;
   top: 190px;
 }
-#buttonEqual {
+#buttonDivide {
   left: 314px;
   top: 190px;
+}
+#buttonPlus {
+  left: 10px;
+  top: 250px;
+}
+#buttonMinus {
+  left: 162px;
+  top: 250px;
+}
+#buttonEqual {
+  left: 314px;
+  top: 250px;
 }

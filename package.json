@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/astraTiCon/electronTest/issues"
   },
-  "homepage": "https://github.com/astraTiCon/electronTest#readme"
+  "homepage": "https://github.com/astraTiCon/electronTest#readme",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  }
 }
