@@ -111,5 +111,12 @@ function calculateOnRPN(rpnArray) {
   return computation[0]
 }
 
+function testing() {
+    return 1;
+}
 
-
+module.exports = {
+    mathStrToArray: mathStrToArray,
+    toRPN: toRPN,
+    calculateOnRPN: calculateOnRPN
+}
